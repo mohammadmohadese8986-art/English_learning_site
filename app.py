@@ -4,7 +4,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs
 from pathlib import Path
-
+import os
 folder = Path(__file__).parent
 page = (folder / "index.html").read_text(encoding="utf-8")
 
