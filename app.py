@@ -32,4 +32,4 @@ class Handler(BaseHTTPRequestHandler):
         self.send_data(result.encode("utf-8"), "text/html; charset=utf-8")
 
 print("سایت اجرا شد: http://localhost:8000")
-HTTPServer(("127.0.0.1", 8000), Handler).serve_forever()
+HTTPServer(("0.0.0.0",int(os.environ.get("PORT",8000))), Handler).serve_forever()
